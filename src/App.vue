@@ -34,13 +34,14 @@ import MusicPage from './view/MusicPage.vue'
   overflow: hidden;
   height: 100vh;
   height: 100dvh;
+
 }
 
 .background-video {
   background-size: cover;
-  width: 100vw;
+  width: 100%;
   /* overflow: hidden; */
-  min-width: 100%;
+  /* min-width: 100%; */
   z-index: -1;
 }
 
