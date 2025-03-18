@@ -18,15 +18,16 @@ import ShopPage from './views/ShopPage.vue'
   </div>
   <HeaderComp />
   <main class="wrapper">
-    <HomePage />
-    <BandPage id="band-page" />
-    <MusicPage id="music-page" />
-    <EventsPage id="events-page" />
-    <ShopPage id="shop-page" />
-    <ContactPage id="contact-page" />
+    <HomePage id="home" />
+    <BandPage id="band" />
+    <MusicPage id="music" />
+    <EventsPage id="events" />
+    <ShopPage id="shop" />
+    <ContactPage id="contact" />
   </main>
   <FooterComp />
 </template>
+
 
 <style scoped>
 .wrapper {

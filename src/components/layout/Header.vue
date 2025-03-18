@@ -4,27 +4,27 @@
 <template>
 
   <header class="header">
-    <router-link to="/#home-page">
+    <router-link to="/">
       <img alt="Red Moon Makers logo" class="logo" src="../../assets/logo.svg" />
     </router-link>
     <nav class="nav">
       <ul class="nav-list">
-        <router-link to="/#home-page">
+        <router-link to="/">
           <li class="nav-list_item">Home</li>
         </router-link>
-        <router-link to="/band#band-page">
+        <router-link to="/band">
           <li class="nav-list_item">Band</li>
         </router-link>
-        <router-link to="/music#music-page">
+        <router-link to="/music">
           <li class="nav-list_item">Music</li>
         </router-link>
-        <router-link to="/events#events-page">
+        <router-link to="/events">
           <li class="nav-list_item">Events</li>
         </router-link>
-        <router-link to="/shop#shop-page">
+        <router-link to="/shop">
           <li class="nav-list_item">Shop</li>
         </router-link>
-        <router-link to="/contact#contact-page">
+        <router-link to="/contact">
           <li class="nav-list_item">Contact</li>
         </router-link>
       </ul>
