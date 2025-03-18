@@ -7,16 +7,36 @@ import MusicPage from './views/MusicPage.vue'
 import ContactPage from './views/ContactPage.vue'
 import EventsPage from './views/EventsPage.vue'
 import ShopPage from './views/ShopPage.vue'
+import { onMounted, ref } from 'vue'
+
+const showVideo = ref(false)
+const showRest = ref(false)
+
+onMounted(() => {
+
+  setTimeout(() => {
+    showVideo.value = true
+  }, 1000)
+
+
+  setTimeout(() => {
+    showRest.value = true
+  }, 3000)
+})
 </script>
 
 <template>
-  <div class="video-container" id="home-page">
+
+  <div class="video-container" :class="{ 'fade-in': showVideo }" id="home-page">
     <video autoplay loop muted class="background-video">
       <source src="/band-music.mp4" type="video/mp4" />
       Votre navigateur ne supporte pas les vidéos HTML5.
     </video>
   </div>
-  <HeaderComp />
+
+  <div class="rest-container" :class="{ 'fade-in': showRest }">
+    <HeaderComp />
+  </div>
   <main class="wrapper">
     <HomePage id="home" />
     <BandPage id="band" />
@@ -26,10 +46,25 @@ import ShopPage from './views/ShopPage.vue'
     <ContactPage id="contact" />
   </main>
   <FooterComp />
+
 </template>
 
 
-<style scoped>
+<style scoped lang="scss">
+.video-container,
+.rest-container {
+  /* De base : invisible (opacité 0) */
+  opacity: 0;
+  transition: opacity 1s ease;
+  /* éventuellement pointer-events: none; pour bloquer l’interaction avant l’anim */
+}
+
+/* Lorsqu'on ajoute la classe .fade-in, on met opacité à 1 */
+.fade-in {
+  opacity: 1 !important;
+}
+
+
 .wrapper {
   grid-column: 1 / -1;
   display: grid;
