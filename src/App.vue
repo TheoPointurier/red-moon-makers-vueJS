@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import HomePage from './views/HomePage.vue'
 import BandPage from './views/BandPage.vue'
-import Header from './components/layout/Header.vue'
-import Footer from './components/layout/Footer.vue'
+import HeaderComp from './components/layout/Header.vue'
+import FooterComp from './components/layout/Footer.vue'
 import MusicPage from './views/MusicPage.vue'
 import ContactPage from './views/ContactPage.vue'
 import EventsPage from './views/EventsPage.vue'
@@ -16,7 +16,7 @@ import ShopPage from './views/ShopPage.vue'
       Votre navigateur ne supporte pas les vidéos HTML5.
     </video>
   </div>
-  <Header />
+  <HeaderComp />
   <main class="wrapper">
     <HomePage />
     <BandPage id="band-page" />
@@ -25,7 +25,7 @@ import ShopPage from './views/ShopPage.vue'
     <ShopPage id="shop-page" />
     <ContactPage id="contact-page" />
   </main>
-  <Footer />
+  <FooterComp />
 </template>
 
 <style scoped>
@@ -47,9 +47,7 @@ import ShopPage from './views/ShopPage.vue'
 
 .background-video {
   background-size: cover;
-  width: 100%;
-  /* overflow: hidden; */
-  /* min-width: 100%; */
+
   z-index: -1;
 }
 

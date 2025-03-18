@@ -10,6 +10,8 @@
 <style scoped>
 .home-page-container {
   height: 100vh;
+  background-color: black;
+  z-index: -1;
 
 }
 </style>

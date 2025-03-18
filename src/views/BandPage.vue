@@ -80,54 +80,61 @@
   }
 
   &__members-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(18%, 1fr));
-    gap: 1rem;
-    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
     width: 100%;
     height: 80%;
     margin: 0 auto;
+    box-sizing: border-box;
 
     &_band-member {
-      grid-row: 1 / 2;
+      flex: 1;
+      width: 20%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       position: relative;
       overflow: hidden;
+      transition: flex 0.4s ease-out;
+
+      &:hover {
+        flex: 2;
+      }
 
       &--bass {
         background-image: url("../assets/img/bass-rmbg.png");
         background-origin: border-box;
-        background-size: 400;
         background-position: center;
         background-repeat: no-repeat;
+
       }
 
       &--saxophone {
         background-image: url("../assets/img/saxophone-rmbg.png");
         background-origin: border-box;
-        background-size: 400;
         background-position: center;
         background-repeat: no-repeat;
+        // grid-column: span 1;
+
       }
 
       &--drums {
         background-image: url("../assets/img/drum-rmbg.png");
-        background-origin: border-box;
-        // background-position: center;
+        background-origin: padding-box;
+        background-position: center;
         background-position-y: 60%;
-        background-size: 400;
         background-repeat: no-repeat;
+
       }
 
       &--guitare {
         background-image: url("../assets/img/guitare-rmbg.png");
         background-origin: border-box;
         background-position: center;
-        background-size: 400;
         background-repeat: no-repeat;
+
       }
 
       &--microphone {
@@ -136,6 +143,7 @@
         background-position: center;
         background-size: 400;
         background-repeat: no-repeat;
+
       }
 
       &-title {

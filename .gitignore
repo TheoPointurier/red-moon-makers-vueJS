@@ -16,6 +16,9 @@ dist/
 # Vite cache
 .vite
 
+# song before API request
+public/music/
+
 # Local environment files
 .env
 .env.local
