@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import HomePage from './view/HomePage.vue'
-import BandPage from './view/BandPage.vue'
+import HomePage from './views/HomePage.vue'
+import BandPage from './views/BandPage.vue'
 import Header from './components/layout/Header.vue'
-import MusicPage from './view/MusicPage.vue'
+import MusicPage from './views/MusicPage.vue'
 </script>
 
 <template>
@@ -12,7 +12,7 @@ import MusicPage from './view/MusicPage.vue'
       Votre navigateur ne supporte pas les vidéos HTML5.
     </video>
   </div>
-  <Header></Header>
+  <Header />
   <main class="wrapper">
     <HomePage />
     <BandPage id="band-page" />
