@@ -2,7 +2,11 @@
 import HomePage from './views/HomePage.vue'
 import BandPage from './views/BandPage.vue'
 import Header from './components/layout/Header.vue'
+import Footer from './components/layout/Footer.vue'
 import MusicPage from './views/MusicPage.vue'
+import ContactPage from './views/ContactPage.vue'
+import EventsPage from './views/EventsPage.vue'
+import ShopPage from './views/ShopPage.vue'
 </script>
 
 <template>
@@ -17,7 +21,11 @@ import MusicPage from './views/MusicPage.vue'
     <HomePage />
     <BandPage id="band-page" />
     <MusicPage id="music-page" />
+    <EventsPage id="events-page" />
+    <ShopPage id="shop-page" />
+    <ContactPage id="contact-page" />
   </main>
+  <Footer />
 </template>
 
 <style scoped>

@@ -18,9 +18,15 @@
         <router-link to="/music#music-page">
           <li class="nav-list_item">Music</li>
         </router-link>
-        <li class="nav-list_item">Events</li>
-        <li class="nav-list_item">Shop</li>
-        <li class="nav-list_item">Contact</li>
+        <router-link to="/events#events-page">
+          <li class="nav-list_item">Events</li>
+        </router-link>
+        <router-link to="/shop#shop-page">
+          <li class="nav-list_item">Shop</li>
+        </router-link>
+        <router-link to="/contact#contact-page">
+          <li class="nav-list_item">Contact</li>
+        </router-link>
       </ul>
     </nav>
   </header>

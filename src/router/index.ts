@@ -16,6 +16,21 @@ const routes = [
     path: '/music',
     name: 'music',
     component: App
+  },
+  {
+    path: '/events',
+    name: 'events',
+    component: App
+  },
+  {
+    path: '/shop',
+    name: 'shop',
+    component: App 
+  },
+  {
+    path: '/contact',
+    name: 'contact',
+    component: App
   }
 ]
 
