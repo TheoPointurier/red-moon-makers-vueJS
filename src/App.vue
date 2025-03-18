@@ -35,7 +35,9 @@ onMounted(() => {
   </div>
 
   <div class="rest-container" :class="{ 'fade-in': showRest }">
+
     <HeaderComp />
+
   </div>
   <main class="wrapper">
     <HomePage id="home" />
@@ -64,6 +66,9 @@ onMounted(() => {
   opacity: 1 !important;
 }
 
+.header-wrapper {
+  opacity: 0;
+}
 
 .wrapper {
   grid-column: 1 / -1;
@@ -78,7 +83,7 @@ onMounted(() => {
   overflow: hidden;
   height: 100vh;
   height: 100dvh;
-
+  z-index: 0;
 }
 
 .background-video {
