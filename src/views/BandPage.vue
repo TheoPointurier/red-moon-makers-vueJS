@@ -85,12 +85,13 @@
     gap: 1rem;
     padding: 1rem;
     width: 100%;
+    height: 80%;
     margin: 0 auto;
 
     &_band-member {
+      grid-row: 1 / 2;
       display: flex;
       flex-direction: column;
-      height: 40rem;
       justify-content: center;
       align-items: center;
       position: relative;
@@ -115,7 +116,8 @@
       &--drums {
         background-image: url("../assets/img/drum-rmbg.png");
         background-origin: border-box;
-        background-position: 50% 100%;
+        // background-position: center;
+        background-position-y: 60%;
         background-size: 400;
         background-repeat: no-repeat;
       }
