@@ -27,20 +27,13 @@ onMounted(() => {
 
 <template>
 
-  <div class="video-container" :class="{ 'fade-in': showVideo }" id="home-page">
-    <video autoplay loop muted class="background-video">
-      <source src="/band-music.mp4" type="video/mp4" />
-      Votre navigateur ne supporte pas les vidéos HTML5.
-    </video>
-  </div>
-
   <div class="rest-container" :class="{ 'fade-in': showRest }">
-
     <HeaderComp />
-
   </div>
   <main class="wrapper">
-    <HomePage id="home" />
+    <div class="video-container" :class="{ 'fade-in': showVideo }" id="home-page">
+      <HomePage id="home" />
+    </div>
     <BandPage id="band" />
     <MusicPage id="music" />
     <EventsPage id="events" />
@@ -83,31 +76,22 @@ onMounted(() => {
   overflow: hidden;
   height: 100vh;
   height: 100dvh;
-  z-index: 0;
+  // z-index: 0;
 }
 
-.background-video {
-  background-size: cover;
-
-  z-index: -1;
+header {
+  display: flex;
+  place-items: center;
+  padding-right: calc(var(--section-gap) / 2);
 }
 
-@media (min-width: 1024px) {
+.logo {
+  margin: 0 2rem 0 0;
+}
 
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+header .wrapper {
+  display: flex;
+  place-items: flex-start;
+  flex-wrap: wrap;
 }
 </style>

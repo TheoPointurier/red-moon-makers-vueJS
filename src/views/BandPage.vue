@@ -108,7 +108,6 @@
         background-origin: border-box;
         background-position: center;
         background-repeat: no-repeat;
-
       }
 
       &--saxophone {
@@ -124,7 +123,7 @@
         background-image: url("../assets/img/drum-rmbg.png");
         background-origin: padding-box;
         background-position: center;
-        background-position-y: 60%;
+        // background-position-y: 60%;
         background-repeat: no-repeat;
 
       }
@@ -134,16 +133,30 @@
         background-origin: border-box;
         background-position: center;
         background-repeat: no-repeat;
-
       }
 
       &--microphone {
         background-image: url("../assets/img/microphone-rmbg.png");
         background-origin: border-box;
         background-position: center;
-        background-size: 400;
         background-repeat: no-repeat;
+      }
 
+      &--guitare,
+      &--microphone,
+      &--drums,
+      &--bass,
+      &--saxophone {
+        background-size: 25rem;
+        transition: all 0.8s ease-out;
+
+        @media screen and (max-width: 1200px) {
+          background-size: 100% auto;
+        }
+
+        &:hover {
+          background-size: 100%;
+        }
       }
 
       &-title {
